@@ -45,3 +45,7 @@ RUN cd ~ && mkdir .config/tmux && tar zxvf tmux.tar.gz -C ~/.config/tmux
 RUN cd ~ && git clone https://github.com/brendangregg/FlameGraph.git
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && . ~/.cargo/env && cargo install --locked bat \
 && mkdir -p ~/.local/apps/bat/bin && ln -s ~/.cargo/bin/bat ~/.local/apps/bat/bin
+
+LABEL org.opencontainers.image.source=https://github.com/johnsgc1/dev_container
+LABEL org.opencontainers.image.description="Development environment for c++/cuda"
+LABEL org.opencontainers.image.licenses=MIT
